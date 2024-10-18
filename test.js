@@ -90,7 +90,7 @@ function createChart(data){
 }
 
 // Load JSON data and create the chart
-d3.json("../data/testdata.json").then(data => {
+d3.json("data/testdata.json").then(data => {
     createChart(data);
 }).catch(error => {
     console.error("Error loading the JSON data:", error);
