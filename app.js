@@ -1,10 +1,10 @@
 const data = [10, 30, 50, 20, 40];
 
       const width = 600;
-      const height = 400;
+      const height = width;
 
       const svg = d3
-        .select("#chart")
+        .select("#chart2")
         .append("svg")
         .attr("width", width)
         .attr("height", height);

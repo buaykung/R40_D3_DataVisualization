@@ -1,7 +1,6 @@
-
 function createChart(data){
 // Specify the chart’s dimensions.
-  const width = 928;
+  const width = 600; // default:928
   const height = width;
 
   // Create the color scale.
