@@ -6,6 +6,7 @@
     .card-grid{
       display: grid;
       gap: 15px;
+      margin-top: 10px;
       margin-bottom: 20px;
       grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     }
@@ -18,68 +19,105 @@
       overflow: hidden;       /* Ensures content doesn't spill out */
       background-color: #fff; /* Background color of the card */
       justify-content: center;
-      align-items: center;
+      align-items: start;
+    }
+    .card-header {
+      background-color: rgba(0, 0, 0, 0);
+      border: 0px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .card-footer{
+      display: flex;
+      width: 100%;
+      background-color: #fff;
+      color: #099453;
+      border: 0px;
+      justify-content: end;
+      padding: 10px 30px 10px 10px;
     }
     .card:hover{
       background-color: #15613d;
-      color: #fff;
+      color: #fff !important;
       transform: translateY(-4px);
     }
-    .card:hover.p{
-      color: #fff;
-    }
-    /* .nonhover-effect{
-        color:inherit;
-        text-decoration:none;
-        pointer-events:none;
-    } */
-    h5{
-        text-align: center;
+    .card-body{
+      max-width: 100%;
+      padding: 0px 10px 30px 20px;
     }
     a{
-        color:#099453;
+      color:#099453;
     }
     a:hover {
-          color: #15613d;        /* Darker blue when hovered */
-          text-decoration: none; /* Adds underline on hover */
+      color: #15613d;        /* Darker blue when hovered */
+      text-decoration: none; /* Adds underline on hover */
+    }
+    .description{
+      display: flex;
+    }
+    .status-lable{
+      font-size: 13px;
+    }
+    .status-value{
+      font-size: 13px;
+      margin-left: 13px;
     }
   </style>
   <div id="main">
     <div class="d-flex justify-content-center mt-3">
-       <h2 style="color: #18764a;">Dashboard Porta<i class="fas fa-chart-area"></i></h2>
+       <h2 style="color: #18764a;">งานของกลุ่มเทคโนโลยีสารสนเทศ<i class="fas fa-chart-area"></i></h2>
     </div>
     <div class="container-fluid mt-3">
       <div class="card-grid">
         <a class="card shadow" href="#">
-          <h5 class="card-header">งาน 1</h5>
+          <div class="card-header">งาน 1</div>
           <div class="card-body">
-            <p class="card-text">รายละเอียด
-            </p>
+            <div class="card-text">รายละเอียด
+            </div>
           </div>
+          <div class="float-right card-footer">อัปเดต: วันนี้</div>
         </a>
-        <a class="card shadow" href="http://ddc.moph.go.th/dir/pagecontent.php?page=2124&dept=dir">
-          <img src="https://ddc.moph.go.th/uploads/ckeditor2//files/High impact research-Logo.png" alt="DRDS Dashboard"
-            style="height: auto; width: 100px; padding-bottom: 0rem; margin-top: 20px;">
-          <h5 style="margin-top: 20px;">HIRES Dashboard</h5>
+        <a class="card shadow" href="#">
+          <div class="card-header">งาน 2</div>
+          <div class="card-body">
+            <div class="card-text">รายละเอียด
+            </div>
+          </div>
+          <div class="float-right card-footer">อัปเดต: วันนี้</div>
+        </a>
+        <a class="card shadow" href="#">
+          <div class="card-header">งาน 3</div>
+          <div class="card-body">
+            <div class="card-text">รายละเอียด
+            </div>
+          </div>
+          <div class="float-right card-footer">อัปเดต: วันนี้</div>
+        </a>
+        <a class="card shadow" href="#">
+          <div class="card-header">งาน 4</div>
+          <div class="card-body">
+            <div class="card-text">รายละเอียด
+            </div>
+          </div>
+          <div class="float-right card-footer">อัปเดต: วันนี้</div>
         </a>
       </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 d-flex justify-content-center">
-                
-            </div>
-            <div class="col-lg-6 col-md-6 d-flex justify-content-center">
-                <a class="card shadow" href="http://ddc.moph.go.th/dir/pagecontent.php?page=2124&dept=dir">
-                    <img src="https://ddc.moph.go.th/uploads/ckeditor2//files/High impact research-Logo.png" alt="DRDS Dashboard" style="height: auto; width: 100px; padding-bottom: 0rem; margin-top: 20px;">
-                    <h5 style="margin-top: 20px;">HIRES Dashboard</h5>
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6 d-flex justify-content-center">
-                <a class="card shadow" href="http://ddc.moph.go.th/dir/pagecontent.php?page=2128&dept=dir">
-                    <h1 style="color: #868686;"><i class="fas fa-chart-pie"></i></h1>
-                    <h5>UCBP-DDC Dashboard</h5>
-                </a>
-            </div>
-        </div>
+      <div class="description">
+        <div class="status-lable">วันที่สร้าง :</div>
+        <div class="status-value">5 กรกฎาคม 2568</div>
+      </div>
+      <div class="description">
+        <div class="status-lable">วันที่อัปเดท :</div>
+        <div class="status-value">7 กรกฎาคม 2568</div>
+      </div>
+      <div class="description">
+        <div class="status-lable">ผู้รับผิดชอบ :</div>
+        <div class="status-value">นายยุทธนา ชื่นจบก</div>
+      </div>
+      <div class="description">
+        <div class="status-lable">รายละเอียดการติดต่อ :</div>
+        <div class="status-value">02-590-3175</div>
+      </div>
     </div>
   </div>
 </body>
