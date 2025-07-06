@@ -1,0 +1,57 @@
+<!-- ปุ่มเปิด Modal -->
+<div style="display: flex; justify-content: center; margin-bottom: 15px;">
+    <a class="btn btn-light" href="#myModal"><i class="fa fa-expand" aria-hidden="true" style="padding-right: 10px;"></i>Fullscreen</a>
+</div>
+<div>
+    <iframe src="https://jolly-tree-0d742aa1e.4.azurestaticapps.net" frameborder="0" style="width: 100%; height: 1000px;"></iframe>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div>
+        <a class="btn btn-light close" href="#">
+            <span aria-hidden="true" style="font-size: 32px;">&times;</span>
+        </a>
+    </div>
+    <iframe src="https://jolly-tree-0d742aa1e.4.azurestaticapps.net" frameborder="0" style="width: 100%; height: 1000px;"></iframe>
+  </div>
+</div>
+
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .modal:target {
+    display: block;
+  }
+
+  .modal-content {
+    display: flex;
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  
+  .close{
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+</style>

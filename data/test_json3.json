@@ -1,0 +1,32 @@
+{
+	"name": "packed_circle",
+	"children": [
+		{
+			"name": "CD",
+			"children": [{"name": "Communicable disease", "value": 3938}]
+		},
+		{
+			"name": "ENV-OCC",
+			"children": [
+				{"name": "Environmental health", "value": 3534},
+				{"name": "Occupational health", "value": 5731}
+			]
+		},
+		{
+			"name": "NATI",
+			"children": [{"name": "Injury", "value": 7074}]
+		},
+		{
+			"name": "SALTH",
+			"children": [
+				{"name": "Leprosy", "value": 1983},
+				{"name": "AIDS", "value": 2047},
+				{"name": "Sexual Transmitted Diseases", "value": 1375}
+			]
+		},
+		{
+			"name": "SYSTEM",
+			"children": [{"name": "systems and integration", "value": 8746}]
+		}
+	]
+}

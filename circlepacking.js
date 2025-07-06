@@ -1,11 +1,11 @@
 function createChart(data){
 // Specify the chart’s dimensions.
-  const width = 600; // default:928
+  const width = 500; // default:928
   const height = width;
 
   // Create the color scale.
   const color = d3.scaleLinear()
-      .domain([0, 5])
+      .domain([0, 7])
       .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
     //   .range(["hsl(228,30%,40%)", "hsl(152,80%,80%)"])
       .interpolate(d3.interpolateHcl);
@@ -13,7 +13,7 @@ function createChart(data){
   // Compute the layout.
   const pack = data => d3.pack()
       .size([width, height])
-      .padding(3)
+      .padding(7)
     (d3.hierarchy(data)
       .sum(d => d.value)
       .sort((a, b) => b.value - a.value));
@@ -24,13 +24,14 @@ function createChart(data){
       .attr("viewBox", `-${width / 2} -${height / 2} ${width} ${height}`)
       .attr("width", width)
       .attr("height", height)
-      .attr("style", `max-width: 100%; height: auto; display: block; margin: 0 -14px; background: ${color(0)}; cursor: pointer;`);
+      .attr("style", `max-width: 100%; height: auto; display: block; margin:0 ; background: ${color(0)}; cursor: pointer;`);
 
   // Append the nodes.
   const node = svg.append("g")
     .selectAll("circle")
     .data(root.descendants().slice(1))
     .join("circle")
+      .attr("r", d => d.children ? d.r + 10 : d.r)
       .attr("fill", d => d.children ? color(d.depth) : "white")
       .attr("pointer-events", d => !d.children ? "none" : null)
       .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
@@ -39,7 +40,7 @@ function createChart(data){
 
   // Append the text labels.
   const label = svg.append("g")
-      .style("font", "10px sans-serif")
+      .style("font", "13px sans-serif")
       .attr("pointer-events", "none")
       .attr("text-anchor", "middle")
     .selectAll("text")
@@ -89,7 +90,7 @@ function createChart(data){
 }
 
 // Load JSON data and create the chart
-d3.json("data/testdata.json").then(data => {
+d3.json("data/test_json4.json").then(data => {
     createChart(data);
 }).catch(error => {
     console.error("Error loading the JSON data:", error);

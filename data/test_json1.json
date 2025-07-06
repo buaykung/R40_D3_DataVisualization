@@ -1,0 +1,13 @@
+{
+  'name': 'packed_circle',
+  'children': [{'name': 'CD', 'children': [{'name': 'Communicable disease'}]},
+  {'name': 'ENV-OCC',
+   'children': [{'name': 'Environmental health'},
+    {'name': 'Occupational health'}]},
+  {'name': 'NATI', 'children': [{'name': 'Injury'}]},
+  {'name': 'SALTH',
+   'children': [{'name': 'Leprosy'},
+    {'name': 'AIDS'},
+    {'name': 'Sexual Transmitted Diseases'}]},
+  {'name': 'SYSTEM', 'children': [{'name': 'systems and integration'}]}]
+}

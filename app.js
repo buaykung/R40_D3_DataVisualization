@@ -1,6 +1,6 @@
 const data = [10, 30, 50, 20, 40];
 
-      const width = 600;
+      const width = 500;
       const height = width;
 
       const svg = d3
